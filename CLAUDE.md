@@ -10,9 +10,10 @@ A self-contained, single-page quiz app for studying the **Claude Certified Archi
 
 ## Architecture
 
-- **`index.html`** — The entire app: HTML structure, CSS (dark theme with CSS variables), and vanilla JavaScript. All-in-one, ~650 lines. Questions are loaded inline from the JSON file via a `const QUESTIONS = ...` assignment at line 333.
+- **`index.html`** — Landing page with project description, CTAs (Simulado + FAQ), and social links footer.
+- **`simulado.html`** — The quiz app: HTML structure, CSS (dark theme with CSS variables), and vanilla JavaScript. All-in-one, ~650 lines. Questions are loaded inline via a `const QUESTIONS = ...` assignment.
+- **`ccaf-faq.html`** — FAQ page covering exam details, study strategies, and key concepts per domain.
 - **`all_questions.json`** — Question bank (337 questions) with schema: `{ id, source, scenario, task_statement, question, options: {A,B,C,D}, correct, explanation, domain }`.
-- **`ccaf-faq.html`** — Standalone FAQ page covering exam details, study strategies, and key concepts per domain. Same dark theme as the simulado.
 
 ## Exam Domains (5)
 
@@ -36,6 +37,7 @@ A self-contained, single-page quiz app for studying the **Claude Certified Archi
 ## Key Conventions
 
 - UI language is **Portuguese (pt-BR)**.
-- The HTML file embeds the full question array inline — when updating questions, sync both `all_questions.json` and the embedded `QUESTIONS` constant in `index.html`.
+- The HTML file embeds the full question array inline — when updating questions, sync both `all_questions.json` and the embedded `QUESTIONS` constant in `simulado.html`.
 - Question IDs follow the pattern `D{domain}-{number}` (e.g., `D1-001`).
-- No build step — to run, just `open index.html`.
+- All HTML files are self-contained (inline CSS, base64 favicon/logo, no build step).
+- Navigation: `index.html` (landing) → `simulado.html` (quiz) / `ccaf-faq.html` (FAQ).
