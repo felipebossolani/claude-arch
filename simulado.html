@@ -623,8 +623,12 @@ function retryWrong() {
   renderQuestion();
 }
 
-// INIT
-// Init handled by fetch callback above
+// Warn before leaving during active quiz
+window.addEventListener('beforeunload', e => {
+  if (state.questions.length > 0 && state.currentIndex < state.questions.length) {
+    e.preventDefault();
+  }
+});
 </script>
 </body>
 </html>
