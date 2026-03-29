@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A self-contained, single-page quiz app for studying the **Claude Certified Architect — Foundations (CCA-F)** exam. No build tools, no frameworks, no dependencies.
 
-**Live:** https://felipebossolani.github.io/claude-certified-architect-foundations-simulado/
+**Live:** https://felipebossolani.github.io/claude-arch/
 
 ## Architecture
 
