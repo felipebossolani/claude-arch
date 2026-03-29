@@ -27,9 +27,9 @@
 <link rel="stylesheet" href="styles.css">
 <style>
 body { line-height: 1.7; }
-.hero { padding: 72px 0 48px; }
-.hero-title { font-size: 38px; font-weight: 700; letter-spacing: -1.2px; line-height: 1.15; margin-bottom: 32px; text-align: center; }
-.hero-subtitle { font-size: 17px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 40px; }
+.hero { padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 60px); text-align: center; }
+.hero-title { font-size: 52px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 32px; }
+.hero-subtitle { font-size: 20px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 56px; max-width: 540px; }
 .hero-actions { display: flex; gap: 16px; }
 .hero-cta { flex: 1; text-align: center; padding: 16px 24px; background: var(--accent-orange); color: white; font-family: 'Poppins', Arial, sans-serif; font-size: 16px; font-weight: 600; border-radius: var(--radius); text-decoration: none; transition: background 0.15s; letter-spacing: -0.3px; }
 .hero-cta:hover { background: #c4694c; }
@@ -45,8 +45,9 @@ body { line-height: 1.7; }
 .domain-weight { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-muted); }
 .sources-text { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
 @media (max-width: 640px) {
-  .hero { padding: 48px 0 32px; }
-  .hero-title { font-size: 28px; }
+  .hero { min-height: calc(100vh - 60px); padding: 40px 0; }
+  .hero-title { font-size: 36px; }
+  .hero-subtitle { font-size: 17px; }
   .hero-actions { flex-direction: column; }
   .hero-cta { width: 100%; }
   .nav { gap: 16px; }
