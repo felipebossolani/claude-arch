@@ -36,30 +36,25 @@ code, .mono { font-family: 'JetBrains Mono', monospace; }
   position: sticky; top: 0; z-index: 100;
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border);
-  padding: 14px 0;
 }
 .header-inner {
-  max-width: 860px; margin: 0 auto; padding: 0 24px;
+  max-width: 860px; margin: 0 auto; padding: 0 40px;
   display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
 }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo-icon { height: 30px; width: auto; object-fit: contain; }
 .logo-text { font-size: 15px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.3px; }
 
 /* Nav */
-.nav { display: flex; align-items: center; gap: 24px; }
+.nav { display: flex; align-items: center; gap: 28px; }
 .nav-link {
-  font-size: 14px; font-weight: 500; color: var(--text-secondary);
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 14px; font-weight: 400; color: var(--text-primary);
   text-decoration: none; transition: color 0.15s;
 }
-.nav-link:hover { color: var(--text-primary); }
-.nav-cta {
-  font-size: 13px; font-weight: 600; color: white;
-  background: var(--accent-orange); border-radius: 6px;
-  padding: 7px 16px; text-decoration: none; transition: background 0.15s;
-}
-.nav-cta:hover { background: #c4694c; }
-.nav-cta .nav-cta-short { display: none; }
+.nav-link:hover { color: var(--accent-orange); }
+.nav-link--active { color: var(--accent-orange); font-weight: 500; }
 
 /* Main / Container */
 .main { max-width: 660px; margin: 0 auto; padding: 0 24px; }
