@@ -443,16 +443,42 @@ function setOrder(order, btn) {
 // ═══════════════════════════════════════
 // QUIZ
 // ═══════════════════════════════════════
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function selectProportional(questions, count) {
+  const byDomain = {};
+  questions.forEach(q => {
+    if (!byDomain[q.domain]) byDomain[q.domain] = [];
+    byDomain[q.domain].push(q);
+  });
+  const domains = Object.keys(byDomain);
+  const total = questions.length;
+  let result = [];
+  let remaining = count;
+  domains.forEach((d, i) => {
+    const share = i < domains.length - 1
+      ? Math.round(count * byDomain[d].length / total)
+      : remaining;
+    const picked = shuffle([...byDomain[d]]).slice(0, share);
+    result = result.concat(picked);
+    remaining -= picked.length;
+  });
+  return result;
+}
+
 function startQuiz() {
   let qs = QUESTIONS.filter(q => state.selectedDomains.has(q.domain));
-  if (state.order === 'shuffle') {
-    for (let i = qs.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [qs[i], qs[j]] = [qs[j], qs[i]];
-    }
-  }
   if (state.questionCount > 0 && qs.length > state.questionCount) {
-    qs = qs.slice(0, state.questionCount);
+    qs = selectProportional(qs, state.questionCount);
+  }
+  if (state.order === 'shuffle') {
+    shuffle(qs);
   }
   state.questions = qs;
   state.currentIndex = 0;
