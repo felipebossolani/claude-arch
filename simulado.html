@@ -633,7 +633,8 @@ function retryWrong() {
 
 // Warn before leaving during active quiz
 window.addEventListener('beforeunload', e => {
-  if (state.questions.length > 0 && state.currentIndex < state.questions.length) {
+  const resultsVisible = document.getElementById('resultsScreen').style.display !== 'none';
+  if (state.questions.length > 0 && !resultsVisible) {
     e.preventDefault();
   }
 });
