@@ -589,7 +589,7 @@ function revealAnswer(letter) {
   const isLast = state.currentIndex === state.questions.length - 1;
   navRow.innerHTML = isLast
     ? `<button class="nav-btn primary" onclick="showResults()">Ver Resultado Final</button>`
-    : `<button class="nav-btn primary" onclick="nextQuestion()">Próxima →</button>`;
+    : `<button class="nav-btn primary" onclick="nextQuestion()">Próxima</button>`;
   updateStats();
 }
 
