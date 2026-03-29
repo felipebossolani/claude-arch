@@ -28,7 +28,7 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6, .logo-text { font-family: 'Poppins', Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', Arial, sans-serif; }
 code, .mono { font-family: 'JetBrains Mono', monospace; }
 
 /* Header */
@@ -44,7 +44,7 @@ code, .mono { font-family: 'JetBrains Mono', monospace; }
 }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo-icon { height: 14px; width: auto; object-fit: contain; }
-.logo-text { font-size: 15px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.3px; }
+
 
 /* Nav */
 .nav { display: flex; align-items: center; gap: 28px; }
