@@ -1,4 +1,4 @@
-# CCA-F Study Lab
+# Claude Arch
 
 Repositório de estudos para a certificação **Claude Certified Architect — Foundations (CCA-F)**.
 
