@@ -315,7 +315,9 @@ fetch("all_questions.json")
   .then(r => r.json())
   .then(data => { QUESTIONS = data; document.getElementById('loadingState').style.display='none'; renderSetup(); })
   .catch(err => {
-    document.getElementById("setupScreen").innerHTML = '<div style="text-align:center;padding:60px 0;color:var(--accent-red)"><h2>Erro ao carregar questões</h2><p>' + err.message + '</p></div>';
+    const el = document.getElementById("setupScreen");
+    el.innerHTML = '<div style="text-align:center;padding:60px 0;color:var(--accent-red)"><h2>Erro ao carregar questões</h2><p id="errorMsg"></p></div>';
+    document.getElementById("errorMsg").textContent = err.message;
   });
 
 // ═══════════════════════════════════════
