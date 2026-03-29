@@ -237,7 +237,7 @@
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 640px) {
-  .header-inner { flex-direction: column; gap: 12px; }
+  .header-inner { gap: 12px; }
   .stats-bar { flex-wrap: wrap; gap: 12px; }
   .setup-title { font-size: 24px; }
   .q-text { font-size: 15px; }
@@ -254,14 +254,17 @@
     <a href="index.html" class="logo">
       <img class="logo-icon" src="logo.png" alt="Claude Arch" />
     </a>
+    <div class="stats-bar" id="statsBar" style="display:none;">
+      <div class="stat"><span>Q</span> <span class="stat-val" id="statCurrent">0</span>/<span class="stat-val" id="statTotal">0</span></div>
+      <div class="stat stat-correct">✓ <span class="stat-val" id="statCorrect">0</span></div>
+      <div class="stat stat-wrong">✗ <span class="stat-val" id="statWrong">0</span></div>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
     <nav class="nav">
       <a href="simulado.html" class="nav-link nav-link--active">Simulado</a>
       <a href="faq.html" class="nav-link">FAQ</a>
-      <div class="stats-bar" id="statsBar" style="display:none;">
-        <div class="stat"><span>Q</span> <span class="stat-val" id="statCurrent">0</span>/<span class="stat-val" id="statTotal">0</span></div>
-        <div class="stat stat-correct">✓ <span class="stat-val" id="statCorrect">0</span></div>
-        <div class="stat stat-wrong">✗ <span class="stat-val" id="statWrong">0</span></div>
-      </div>
     </nav>
   </div>
 </header>
