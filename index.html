@@ -30,11 +30,12 @@ body { line-height: 1.7; }
 .hero { padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 60px); text-align: center; }
 .hero-title { font-size: 52px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 32px; }
 .hero-subtitle { font-size: 20px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 56px; max-width: 540px; }
-.hero-actions { display: flex; gap: 16px; }
-.hero-cta { flex: 1; text-align: center; padding: 16px 24px; background: var(--accent-orange); color: white; font-family: 'Poppins', Arial, sans-serif; font-size: 16px; font-weight: 600; border-radius: var(--radius); text-decoration: none; transition: background 0.15s; letter-spacing: -0.3px; }
+.hero-cta { display: inline-block; padding: 16px 48px; background: var(--accent-orange); color: white; font-family: 'Poppins', Arial, sans-serif; font-size: 16px; font-weight: 600; border-radius: var(--radius); text-decoration: none; transition: background 0.15s; letter-spacing: -0.3px; }
 .hero-cta:hover { background: #c4694c; }
 .hero-cta--secondary { background: transparent; color: var(--accent-orange); border: 1px solid var(--accent-orange); }
 .hero-cta--secondary:hover { background: rgba(217,119,87,0.05); }
+.faq-cta { text-align: center; padding: 56px 0; }
+.faq-cta-text { font-size: 16px; color: var(--text-secondary); line-height: 1.7; max-width: 480px; margin: 0 auto 32px; }
 .section { padding: 48px 0; border-top: 1px solid var(--border); }
 .section-title { font-size: 20px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 24px; }
 .domain-list { list-style: none; }
@@ -48,8 +49,7 @@ body { line-height: 1.7; }
   .hero { min-height: calc(100vh - 60px); padding: 40px 0; }
   .hero-title { font-size: 36px; }
   .hero-subtitle { font-size: 17px; }
-  .hero-actions { flex-direction: column; }
-  .hero-cta { width: 100%; }
+  .hero-cta { width: 100%; text-align: center; }
   .nav { gap: 16px; }
 }
 </style>
@@ -75,10 +75,7 @@ body { line-height: 1.7; }
   <section class="hero">
     <h1 class="hero-title">Domine o Claude</h1>
     <p class="hero-subtitle">Simulador gratuito para a certificação Claude Certified Architect Foundations (CCA-F). Prepare-se com questões baseadas em cenários reais.</p>
-    <div class="hero-actions">
-      <a href="simulado.html" class="hero-cta">Iniciar Simulado</a>
-      <a href="faq.html" class="hero-cta hero-cta--secondary">Ver FAQ sobre o exame</a>
-    </div>
+    <a href="simulado.html" class="hero-cta">Iniciar Simulado</a>
   </section>
 
   <section class="section">
@@ -110,6 +107,12 @@ body { line-height: 1.7; }
         <span class="domain-weight">15%</span>
       </div>
     </div>
+  </section>
+
+  <section class="section faq-cta">
+    <h2 class="section-title">Dúvidas?</h2>
+    <p class="faq-cta-text">Tudo sobre o exame, formato das questões, estratégias de estudo e como tirar o máximo do simulador — reunido em um só lugar.</p>
+    <a href="faq.html" class="hero-cta hero-cta--secondary">Consultar FAQ</a>
   </section>
 
 </main>
