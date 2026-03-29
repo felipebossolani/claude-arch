@@ -43,7 +43,7 @@ code, .mono { font-family: 'JetBrains Mono', monospace; }
   height: 60px;
 }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.logo-icon { height: 30px; width: auto; object-fit: contain; }
+.logo-icon { height: 18px; width: auto; object-fit: contain; }
 .logo-text { font-size: 15px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.3px; }
 
 /* Nav */
