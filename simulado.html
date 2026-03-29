@@ -285,8 +285,8 @@
     <div class="mode-section">
       <div class="mode-label">Modo de feedback</div>
       <div class="mode-options">
-        <button class="mode-btn selected" data-mode="immediate" onclick="setMode('immediate', this)">Feedback imediato</button>
-        <button class="mode-btn" data-mode="end" onclick="setMode('end', this)">Resultado no final</button>
+        <button class="mode-btn" data-mode="immediate" onclick="setMode('immediate', this)">Feedback imediato</button>
+        <button class="mode-btn selected" data-mode="end" onclick="setMode('end', this)">Resultado no final</button>
       </div>
     </div>
 
@@ -328,7 +328,7 @@ fetch("all_questions.json")
 // ═══════════════════════════════════════
 let state = {
   selectedDomains: new Set(['D1','D2','D3','D4','D5']),
-  mode: 'immediate',
+  mode: 'end',
   order: 'shuffle',
   questions: [],
   currentIndex: 0,
